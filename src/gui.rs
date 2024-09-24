@@ -2,7 +2,7 @@ use druid::widget::{Button, Flex, TextBox};
 use druid::{AppLauncher, Data, Lens, LocalizedString, Widget, WidgetExt, WindowDesc};
 use reqwest; // Add this import for HTTP requests
 use serde_json::json; // Import for creating JSON payload
-use std::error::Error; // Import for handling errors
+
 
 #[derive(Clone, Data, Lens)]
 struct AppState {

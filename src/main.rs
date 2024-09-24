@@ -1,4 +1,4 @@
-use druid::AppLauncher;
+
 use std::error::Error;
 
 mod gui; // Assuming your GUI code is in a module named `gui`
