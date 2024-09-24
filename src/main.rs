@@ -1,8 +1,11 @@
-// src/main.rs
+use druid::AppLauncher;
+use std::error::Error;
 
-mod gui;
+mod gui; // Assuming your GUI code is in a module named `gui`
 
-fn main() {
-    // Call the GUI function from gui.rs
-    gui::run_gui();
+#[tokio::main] // This macro will set up the Tokio runtime
+async fn main() -> Result<(), Box<dyn Error>> {
+    // Run the GUI in the context of the Tokio runtime
+    gui::run_gui().await; // Ensure this function is async
+    Ok(())
 }
